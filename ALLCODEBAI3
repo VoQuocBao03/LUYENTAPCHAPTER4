@@ -1,0 +1,170 @@
+//CODE SHAPE
+package luyentap.bai3;
+
+public class Shape {
+    private String color;
+    private boolean filled;
+
+    public Shape(){
+    }
+
+    public Shape(String color, boolean filled)
+    {
+        this.color = color;
+        this.filled = filled;
+    }
+
+    public String getColor(){
+        return color;
+    }
+    public void setColor(String color){
+        this.color = color;
+    }
+
+    public boolean getFilled(){
+        return filled;
+    }
+    public void setFilled(boolean filled){
+        this.filled = filled;
+    }
+
+}
+
+
+
+//CODE CIRCLE
+package luyentap.bai3;
+
+
+public class Circle extends Shape {
+    protected double radius;
+
+    public Circle(){
+    }
+
+    public Circle(String color, boolean filled, double radius){
+        super(color, filled );
+        this.radius = radius;
+    }
+
+    public double getRadius(){
+        return radius;
+    }
+    public void setRadius(double radius){
+        this.radius = radius;
+    }
+
+    public Double getArea() {
+        return this.radius * this.radius * Math.PI; 
+        //dien tich hinh tron = pi * R^2
+    }
+
+    public double getPerimeter(){
+        return this.radius * Math.PI*2;
+        //chu vi hinh tron
+    }
+
+    public String getToString() {
+        return "Circle{" + "radius=" + radius +" }";
+    }
+}
+
+
+//CODE  RECTANGLE
+package luyentap.bai3;
+
+public class Rectangle extends Shape{
+    private double width = 1.0;
+    private double length = 1.0;
+
+    public Rectangle(){
+        super();
+    }
+
+        public Rectangle(String color, boolean filled, double width, double length){
+            super(color, filled);
+            this.width = width;
+            this.length = length;
+        
+        
+    }
+
+        public double getWidth() {
+            return width;
+        }
+        public void setWidth(double width) {
+            this.width = width;
+        }
+
+
+        public double getLength() {
+            return length;
+        }
+        public void setLength(double length) {
+            this.length = length;
+        }
+
+
+        public double getArea(){
+            return this.length * this.width;
+            //dien tich hinh chu nhat
+        }
+
+        public double getPerimeter(){
+            return (this.length + this.width) *2;
+            //dien tich hinh chu nhat
+        }
+
+        public String getToString() {
+            return "Rectangle{" + "width=" + width +", length='" + length + '\'' +'}';
+        }
+}
+
+
+//CODE SQUARE
+package luyentap.bai3;
+
+public class Square extends Rectangle{
+    private double side;
+    public Square(){ 
+    }
+
+    public Square(String color, boolean filled, double width, double length){
+        super(color, filled, width, length);
+        this.side = side;
+    }
+
+    public double getSide() {
+        return side;
+    }
+
+    public void setSide(double side) {
+        this.side = side;
+    }
+
+    public String getToString() {
+        return "Square{" + "side=" + side+"}";
+    }
+        
+}
+
+
+
+//CODE HAM MAIN BAI3
+package luyentap.bai3;
+
+public class main {
+    public static void main(String[] args){
+        
+        Circle c = new Circle("red", true,1.0);
+        Rectangle r = new Rectangle("red", true, 1.0, 1.0);
+
+        System.out.println("dien tich va chu vi cua hinh tron la: ");
+        System.out.println("Area(dien tich): "      +c.getArea());
+        System.out.println("Perimeter(chu vi): "    +c.getPerimeter());
+
+        System.out.println("dien tich va chu vi cua hinh chu nhat la: ");
+        System.out.println("Area(dien tich): "      +r.getArea());
+        System.out.println("Perimeter(chu vi): "    +r.getPerimeter());
+    }
+}

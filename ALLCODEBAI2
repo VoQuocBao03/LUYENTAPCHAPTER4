@@ -1,0 +1,137 @@
+// CODE VEHICLE
+package luyentap.bai2;
+
+public class Vehicle {
+    private String color;
+    private String model;
+
+    public Vehicle(String color, String model){
+        this.color = color;
+        this.model = model;
+    }
+
+    public String getColor(){
+        return color;
+    }
+    public void setColor(String color){
+        this.color = color;
+    }
+
+
+    
+    public String getModel(){
+        return model;
+    }
+    public void setModel(String model){
+        this.model = model;
+    }
+
+    public void run(){
+        System.out.println("ting ting!");
+    }
+}
+
+
+
+//CODE BICYCLE
+package luyentap.bai2;
+
+public class Bicycle extends Vehicle
+{
+    private int giaban;
+    private String ngaynhap;
+    private String nguongoc;
+
+    public Bicycle(String color, String model, int giaban, String ngaynhap, String nguongoc)
+    {
+        super(color, model);
+        this.giaban = giaban;
+        this.ngaynhap = ngaynhap;
+        this.nguongoc = nguongoc;
+    }
+
+
+    public int getGiaban(){
+        return giaban;
+    }
+    public void setGiaban(int giaban){
+        this.giaban = giaban;
+    }
+
+
+    public String getNguongoc(){
+        return nguongoc;
+    }
+    public void setNguongoc(String nguongoc){
+        this.nguongoc = nguongoc;
+    }
+
+    public String getNgaynhap(){
+        return ngaynhap;
+    }
+    public void setNgaynhap(String ngaynhap){
+        this.ngaynhap = ngaynhap;
+    }
+}
+
+
+//CODE CAR
+package luyentap.bai2;
+
+public class Car extends Vehicle
+{
+    private Double giaban;
+    private String ngaynhap;
+    private String nguongoc;
+
+    public Car(String color, String model, Double giaban, String ngaynhap, String nguongoc)
+    {
+        super(color, model);
+        this.giaban = giaban;
+        this.ngaynhap = ngaynhap;
+        this.nguongoc = nguongoc;
+    }
+
+
+    public Double getGiaban(){
+        return giaban;
+    }
+    public void setGiaban(Double giaban){
+        this.giaban = giaban;
+    }
+
+
+
+    public String getNguongoc(){
+        return nguongoc;
+    }
+    public void setNguongoc(String nguongoc){
+        this.nguongoc = nguongoc;
+    }
+    
+    public String getNgaynhap(){
+        return ngaynhap;
+    }
+    public void setNgaynhap(String ngaynhap){
+        this.ngaynhap = ngaynhap;
+    }
+}
+
+//CODE HAM MAIN BAI2
+package luyentap.bai2;
+
+public class main {
+    public static void main(String[] args)
+    {
+        Bicycle bicycle = new Bicycle("xanh", "sport", 100000000, "1/1/2023","tayninh");
+        System.out.println("thong tin xe dap");
+        System.out.println("color: "    +bicycle.getColor());
+        System.out.println("model: "    +bicycle.getModel());
+        System.out.println("giaban: "   +bicycle.getGiaban());
+        System.out.println("ngaynhap: " +bicycle.getNgaynhap());
+        System.out.println("nguongoc: " +bicycle.getNguongoc());
+
+
+        bicycle.run();
+    }
+}

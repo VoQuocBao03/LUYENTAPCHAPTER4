@@ -1,0 +1,249 @@
+//CODE HOAQUA
+package luyentap.bai1;
+
+public class Hoaqua {
+    private String ten;
+    private String mau;
+
+    public Hoaqua(String ten, String mau)
+    {
+        super();
+        this.ten = ten;
+        this.mau = mau;
+    }
+
+    public String getTen(){
+        return ten;
+    }
+    public void ten(String ten)
+    {
+        this.ten = ten;
+    }
+
+    public String getMau(){
+        return mau;
+    }
+    public void setMau(String mau)
+    {
+        this.mau = mau;
+    }
+    
+}
+
+
+
+
+//CODE QUACAM
+package luyentap.bai1;
+
+public class Quacam extends Hoaqua 
+{
+    private Double giaban;
+    private String nguongoc;
+    private int soluong;
+
+    public Quacam(String ten, String mau, Double giaban, String nguongoc, int soluong)
+    {
+        super(ten, mau);
+        this.giaban = giaban;
+        this.nguongoc = nguongoc;
+        this.soluong = soluong;
+    }
+
+    public Double getGiaban(){
+        return giaban;
+    }
+    public void setGiaban(Double giaban){
+        this.giaban = giaban;
+    }
+
+    public String getNguongoc(){
+        return nguongoc;
+    }
+    public void setNguongoc(String nguongoc){
+        this.nguongoc = nguongoc;
+    }
+
+    public int getSoluong(){
+        return soluong;
+    }
+    public void setSoluong(){
+        this.soluong = soluong;
+    }
+
+}
+
+
+
+//CODE QUACAMPHONG
+package luyentap.bai1;
+
+public class Quacamcaophong extends Hoaqua 
+{
+    private Double giaban;
+    private String nguongoc;
+    private int soluong;
+
+    public Quacamcaophong(String ten, String mau, Double giaban, String nguongoc, int soluong)
+    {
+        super(ten, mau);
+        this.giaban = giaban;
+        this.nguongoc = nguongoc;
+        this.soluong = soluong;
+    }
+
+    public Double getGiaban(){
+        return giaban;
+    }
+    public void setGiaban(Double giaban){
+        this.giaban = giaban;
+    }
+
+    public String getNguongoc(){
+        return nguongoc;
+    }
+    public void setNguongoc(String nguongoc){
+        this.nguongoc = nguongoc;
+    }
+
+    public int getSoluong(){
+        return soluong;
+    }
+    public void setSoluong(){
+        this.soluong = soluong;
+    }
+    
+}
+
+
+
+
+//CODE QUACAMSANH
+package luyentap.bai1;
+
+public class Quacamsanh extends Hoaqua 
+{
+    private Double giaban;
+    private String nguongoc;
+    private int soluong;
+
+
+
+    public Quacamsanh(String ten, String mau, Double giaban, String nguongoc, int soluong)
+    {
+        super(ten, mau);
+        this.giaban = giaban;
+        this.nguongoc = nguongoc;
+        this.soluong = soluong;
+    }
+
+    public Double getGiaban(){
+        return giaban;
+    }
+    public void setGiaban(Double giaban){
+        this.giaban = giaban;
+    }
+
+
+
+    public String getNguongoc(){
+        return nguongoc;
+    }
+    public void setNguongoc(String nguongoc){
+        this.nguongoc = nguongoc;
+    }
+
+
+    public int getSoluong(){
+        return soluong;
+    }
+    public void setSoluong(){
+        this.soluong = soluong;
+    }
+    
+}
+
+
+
+//CODE QUATAO
+package luyentap.bai1;
+
+public class Quatao extends Hoaqua 
+{
+    private Double giaban;
+    private String nguongoc;
+    private int soluong;
+
+    public Quatao(String ten, String mau, Double giaban, String nguongoc, int soluong)
+    {
+        super(ten, mau);
+        this.giaban = giaban;
+        this.nguongoc = nguongoc;
+        this.soluong = soluong;
+    }
+
+    public Double getGiaban(){
+        return giaban;
+    }
+    public void setGiaban(Double giaban){
+        this.giaban = giaban;
+    }
+
+
+
+    public String getNguongoc(){
+        return nguongoc;
+    }
+    public void setNguongoc(String nguongoc){
+        this.nguongoc = nguongoc;
+    }
+
+
+    public int getSoluong(){
+        return soluong;
+    }
+    public void setSoluong(){
+        this.soluong = soluong;
+    }
+    
+}
+
+
+
+//CODE HAM MAIN
+package luyentap.bai1;
+
+public class main {
+    public static void main(String[] agrs)
+    {
+        Quacam quacam = new Quacam("camtuoi","maucam",9.500,"tayninh",1000);
+        Quatao quatao = new Quatao("taotuoi","xanhla",4.500,"tayninh",10000);
+        Quacamcaophong quacamcaophong = new Quacamcaophong("camcaophong","cam",10.500,"tayninh",5000);
+        Quacamsanh quacamsanh = new Quacamsanh("camsanh","maucam",12.500,"tayninh",6000);
+
+        System.out.println("Thong tin qua cam");
+        System.out.println("ten: "          + quacam.getTen());
+        System.out.println("mau: "          + quacam.getMau());
+        System.out.println("giaban: "       + quacam.getGiaban());
+        System.out.println("soluong: "      + quacam.getSoluong());
+
+        System.out.println("Thong tin qua tao");
+        System.out.println("ten: "          + quatao.getTen());
+        System.out.println("mau: "          + quatao.getMau());
+        System.out.println("giaban: "       + quatao.getGiaban());
+        System.out.println("soluong: "      + quatao.getSoluong());
+
+        System.out.println("Thong tin qua camcaophong");
+        System.out.println("ten: "          + quacamcaophong.getTen());
+        System.out.println("mau: "          + quacamcaophong.getMau());
+        System.out.println("giaban: "       + quacamcaophong.getGiaban());
+        System.out.println("soluong: "      + quacamcaophong.getSoluong());
+
+        System.out.println("Thong tin qua camsanh");
+        System.out.println("ten: "          + quacamsanh.getTen());
+        System.out.println("mau: "          + quacamsanh.getMau());
+        System.out.println("giaban: "       + quacamsanh.getGiaban());
+        System.out.println("soluong: "      + quacamsanh.getSoluong());
+
+    }
+}
